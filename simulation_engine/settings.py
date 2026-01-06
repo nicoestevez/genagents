@@ -1,14 +1,17 @@
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
-OPENAI_API_KEY = "API_KEY"
-KEY_OWNER = "NAME"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+KEY_OWNER = "Nico"
 
 
 DEBUG = False
 
 MAX_CHUNK_SIZE = 4
 
-LLM_VERS = "gpt-4o-mini"
+LLM_VERS = "gpt-5-mini"
 
 BASE_DIR = f"{Path(__file__).resolve().parent.parent}"
 
