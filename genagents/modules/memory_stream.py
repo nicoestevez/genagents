@@ -1,17 +1,12 @@
-import math
-import sys
-import datetime
 import random
 import string
-import re
 
 from numpy import dot
 from numpy.linalg import norm
 
-from simulation_engine.settings import * 
-from simulation_engine.global_methods import *
-from simulation_engine.gpt_structure import *
-from simulation_engine.llm_json_parser import *
+from simulation_engine.settings import LLM_PROMPT_DIR, LLM_VERS
+from simulation_engine.gpt_structure import chat_safe_generate, get_text_embedding
+from simulation_engine.llm_json_parser import extract_first_json_dict
 
 
 def run_gpt_generate_importance(

@@ -1,7 +1,9 @@
 import uuid
 
-from genagents.modules.interaction import *
-from genagents.modules.memory_stream import *
+import json
+from genagents.modules.interaction import categorical_resp, numerical_resp, utterance
+from genagents.modules.memory_stream import MemoryStream
+from simulation_engine.global_methods import check_if_file_exists, create_folder_if_not_there
 
 
 # ############################################################################
